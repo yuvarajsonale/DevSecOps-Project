@@ -1,15 +1,16 @@
 name: On Merge to main
 on:
-    pull_request:
+ #   pull_request:
+     push:
       branches:
         - main
-      types:
-      - closed
+  #    types:
+   #   - closed
 
 jobs:
-   
-   if_merged:
-     if: github.event.pull_request.merged == true
+   build:
+  # if_merged:
+  #   if: github.event.pull_request.merged == true
    
      runs-on: ubuntu-latest
      steps:
