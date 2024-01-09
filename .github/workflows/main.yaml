@@ -1,21 +1,21 @@
 name: On Merge to main
 on:
- #   pull_request:
-     push:
+    pull_request:
+    # push:
       branches:
         - main
-  #    types:
-   #   - closed
+      types:
+      - closed
 
 jobs:
-   build:
-  # if_merged:
-  #   if: github.event.pull_request.merged == true
+  #  build:
+   if_merged:
+     if: github.event.pull_request.merged == true
    
      runs-on: ubuntu-latest
      steps:
-        - name: Java JDK 17
-          uses: actions/setup-java@v2
-          with: 
+      - name: Java JDK 17
+        uses: actions/setup-java@v2
+        with: 
            distribution: 'temurin'
            java-version: 17
